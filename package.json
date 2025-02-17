@@ -1,0 +1,21 @@
+{
+  "name": "rooso-inc-website",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "astro": "^5.2.5",
+    "tailwindcss": "^3.4.1",
+    "@astrojs/tailwind": "^5.1.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
