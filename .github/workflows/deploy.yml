@@ -1,8 +1,8 @@
-name: Deploy to GitHub Pages
+name: Deploy Astro Site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -17,15 +17,22 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies and build site
-        run: |
-          npm install
-          npm run build
+      - name: Setup Node.js
+        uses: actions/setup-node@v20
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Astro site
+        run: npm run build
 
       - name: Upload build artifacts
-        uses: actions/upload-pages-artifact@v1  # Use the correct artifact action
+        uses: actions/upload-pages-artifact@v1  # Correct uploader for GitHub Pages
         with:
-          path: dist  # Ensure this matches your actual build output directory
+          path: dist  # Ensure Astro is outputting to this folder
 
   deploy:
     needs: build
