@@ -30,6 +30,11 @@ jobs:
         run: npm run build
       - name: Debug Build Output
         run: ls -la dist
+      - name: Debug Build Output
+        run: |
+          ls -la
+          ls -la dist
+
 
 
       - name: Upload build artifacts
