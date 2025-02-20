@@ -30,7 +30,7 @@ body {
     justify-content: center;
     text-align: center;
     position: relative;
-    background-color: #2A2A2A;
+    background-color: #343432;
 }
 
 .hero-content {
@@ -63,7 +63,7 @@ h1 {
 .cta-button, .phone-button {
     display: inline-block;
     background-color: #9FD134;
-    color: #2A2A2A;
+    color: #343432;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     text-decoration: none;
@@ -116,7 +116,7 @@ h2 {
 
 .contact-card {
     background-color: white;
-    color: #2A2A2A;
+    color: #343432;
     padding: 2rem;
     border-radius: 0.5rem;
     text-align: center;
